@@ -1,7 +1,10 @@
-<p>Hello World</p>
+<p>Todo</p>
 <ul>
   <li *ngFor="let task of tasks" class="{{ task.done ? 'done' : ''}}">
-    {{ task.title }}
+    <label>
+      <input type="checkbox" [(ngModel)]="task.done">
+      {{ task.title }}
+    </label>
   </li>
   <li>
     <input type="text" [(ngModel)]="newTaskTitle" #title="ngModel" required>
