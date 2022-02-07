@@ -27,8 +27,4 @@ export class TaskListComponent implements OnInit {
     this.tasks.push({title: this.newTask.title, done: false, deadline: new Date(this.newTask.deadline)});
     this.newTask = {title: '', deadline: new Date(),};
   }
-
-  isOverdue(task: any) {
-    return !task.done && task.deadline < (new Date()).setHours(0, 0, 0, 0);
-  }
 }
