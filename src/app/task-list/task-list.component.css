@@ -1,1 +1,10 @@
+.ant-list-item {
+  display: block;
+  border-bottom: none;
+  padding-top: 20px;
+}
 
+.ant-list-item:last-child {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}

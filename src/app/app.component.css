@@ -1,0 +1,11 @@
+nz-page-header {
+  background-color: rgb(212, 233, 247);
+  margin-bottom: 1rem;
+}
+app-task-list {
+  display: block;
+  margin: 0 1rem;
+}
+app-task-list-item, app-task-form {
+  width: 100%;
+}
