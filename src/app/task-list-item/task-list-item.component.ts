@@ -10,7 +10,7 @@ export class TaskListItemComponent implements OnInit {
 
   constructor() { }
 
-  @Input() task?: Task;
+  @Input() task?: any;
 
   ngOnInit(): void {
   }
@@ -20,5 +20,9 @@ export class TaskListItemComponent implements OnInit {
       return false;
     }
     return !task.done && task.deadline.getTime() < (new Date()).setHours(0, 0, 0, 0);
+  }
+
+  delete(todo: string):void {
+    console.log("delete");
   }
 }
