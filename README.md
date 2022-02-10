@@ -1,5 +1,7 @@
 # AngularTodoApp
 
+![image](https://user-images.githubusercontent.com/18027680/153378318-7c7ba421-47c3-4328-aad1-d63855d9b0bc.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
