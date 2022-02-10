@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { guid } from '@datorama/akita';
+import { guid, ID } from '@datorama/akita';
 import { tap } from 'rxjs/operators';
 import { TodoStore } from './todo.store';
 import { Task } from '../../../models/task';
@@ -20,8 +20,7 @@ export class TodoService {
     })
   }
 
-  // get() {
-  //   return this.http.get('').pipe(tap(entities => this.todoStore.set(entities)));
-  // }
-
+  deleteTodo(id: ID) {
+    this.todoStore.remove(id);
+  }
 }

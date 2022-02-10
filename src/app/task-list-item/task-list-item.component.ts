@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ID } from '@datorama/akita';
 import { Task } from '../../models/task';
+import { TodoService } from '../task-form/todo';
 
 @Component({
   selector: 'app-task-list-item',
@@ -8,7 +10,8 @@ import { Task } from '../../models/task';
 })
 export class TaskListItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private todoService: TodoService) {
+  }
 
   @Input() task?: any;
 
@@ -22,7 +25,7 @@ export class TaskListItemComponent implements OnInit {
     return !task.done && task.deadline.getTime() < (new Date()).setHours(0, 0, 0, 0);
   }
 
-  delete(todo: string):void {
-    console.log("delete");
+  delete(id: ID):void {
+    this.todoService.deleteTodo(id);
   }
 }

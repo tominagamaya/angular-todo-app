@@ -6,5 +6,5 @@
 <div class="right">
   <nz-tag nzColor="error" *ngIf="isOverdue(task)" class="overdue">期日超過</nz-tag>
   <nz-tag nzColor="default" *ngIf="task && task.deadline">（期日：{{ task && task.deadline|date:'yyyy/MM/dd' }}）</nz-tag>
-  <button nz-button nzType="default" (click)="delete(task ? task.title : '')">削除</button>
+  <button nz-button nzType="default" (click)="delete(task.id)">削除</button>
 </div>
