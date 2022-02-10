@@ -8,6 +8,10 @@ import { Task } from '../../models/task';
 })
 export class TaskFormComponent implements OnInit {
 
+  public readonly minTaskTitleLength: number = 3;
+  public readonly maxTaskTitleLength: number = 20;
+  public readonly taskTitlePattern: string = '[^ |　]';
+
   constructor() { }
 
   @Output() addTask = new EventEmitter<Task>();

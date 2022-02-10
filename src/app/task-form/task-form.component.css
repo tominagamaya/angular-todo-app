@@ -8,3 +8,14 @@ nz-input-group button {
   margin-left: 3%;
   width: 17%;
 }
+.alert {
+  height: 30px;
+  width: 100%;
+  color: #ff4d4f;
+  font-size: 12px;
+  padding: 5px 2px;
+  user-select: none;
+}
+.alert span {
+  display: block;
+}

@@ -1,5 +1,21 @@
 <nz-input-group nzCompact>
-  <input nz-input placeholder="To do" [(ngModel)]="newTask.title" #title="ngModel" required>
+  <input nz-input placeholder="To do"
+    [(ngModel)]="newTask.title"
+    #title="ngModel"
+    required
+    minlength="{{ minTaskTitleLength }}"
+    maxlength="{{ maxTaskTitleLength }}"
+    pattern="{{ taskTitlePattern }}"
+    (change)="newTask.title=newTask.title.trim()"
+  >
   <nz-date-picker [(ngModel)]="newTask.deadline"></nz-date-picker>
   <button nz-button nzType="primary" (click)="submit()" [disabled]="title.invalid">追加</button>
+  <div class="alert">
+    <label *ngIf="title.invalid && (title.dirty || title.touched)" >
+      <span *ngIf="title.errors?.['required']">必須入力です</span>
+      <span *ngIf="title.errors?.['minlength']">{{ minTaskTitleLength }}文字以上で入力してください</span>
+      <span *ngIf="title.errors?.['maxlength']">{{ maxTaskTitleLength }}文字以下で入力してください</span>
+      <span *ngIf="title.errors?.['pattern']">空白以外を入力してください</span>
+    </label>
+  </div>
 </nz-input-group>

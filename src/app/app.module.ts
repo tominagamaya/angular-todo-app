@@ -20,6 +20,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { ValidationComponent } from './validation/validation.component';
 
 registerLocaleData(en);
 
@@ -28,7 +29,8 @@ registerLocaleData(en);
     AppComponent,
     TaskListComponent,
     TaskListItemComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    ValidationComponent
   ],
   imports: [
     BrowserModule,
